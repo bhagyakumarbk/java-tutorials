@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding ="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config></context:annotation-config>
+	<bean id="hello" class="com.spring.learnings.ioc.HelloTunes"></bean>
+
+	<bean id="sim" class="com.spring.learnings.ioc.Airtel">
+		<!-- <property ref="hello" name="service"></property> -->
+	</bean>
+
+	<bean id="jio" class="com.spring.learnings.ioc.Jio"></bean>
+
+	<bean id="address" class="com.spring.learnings.di.Address">
+		<property name="place" value="los angeles"></property>
+		<property name="zipcode" value="1111"></property>
+	</bean>
+
+	<bean id="student" class="com.spring.learnings.di.Student"
+		autowire="byName">
+		<constructor-arg name="studentName" value="kbk" />
+		<constructor-arg name="id" value="1" />
+	</bean>
+
+</beans>
+
