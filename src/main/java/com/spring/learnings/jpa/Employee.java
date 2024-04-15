@@ -51,7 +51,7 @@ public class Employee {
 	private Map<String, String> contactInfo;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "skill_id", referencedColumnName = "id")
+	@JoinColumn(name = "employee_id", referencedColumnName = "id")
 	private List<SkillSet> skill;
 
 	/**

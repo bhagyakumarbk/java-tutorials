@@ -21,6 +21,7 @@ import jakarta.persistence.Table;
 public class Address {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String addressLine1;
 	private String addressLine2;
